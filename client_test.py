@@ -16,7 +16,8 @@ class ClientTest(unittest.TestCase):
     ]
     """ ------------ Add the assertion below ------------ """
 
-
+    for quote in quotes:
+      self.assertEqual(getDatapoint(quote),(quote['stock'],quote['top_bid']['price'],quote['top_ask']['price'],(quote['top_bid']['price'] + quote['top_ask']['price'])/2))
   """ ------------ Add more unit tests ------------ """
 
 
